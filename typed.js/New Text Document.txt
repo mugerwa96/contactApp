@@ -1,0 +1,9 @@
+ <script src="./typed.js"></script>
+    <script>
+
+var typed = new Typed('.det', {
+  strings: ['Web Developer', 'Graphics Designer','Mobile Developer','UI_UX Designer'],
+ typeSpeed:60,
+ backSpeed:60,
+ loop:true
+});

@@ -1,0 +1,427 @@
+/* universal */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+::-webkit-scrollbar
+{
+    display: none;
+}
+body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+/* universal */
+
+/* -------------colorSettings----------- */
+:root{
+    --primary-color:linear-gradient(20deg,rgb(35, 53, 53),rgb(45, 109, 60));
+    --other-color:whitesmoke;
+    --secondary-color:rgb(31, 192, 71)
+}
+.bg-color
+{
+    background:var(--primary-color);
+
+}
+.text-color
+{
+    color:var(--secondary-color)!important;
+
+}
+/* -------------colorSettings----------- */
+
+/* <!----------------------------header-section-------------------- --> */
+header{
+    background:linear-gradient(20deg,rgb(19, 26, 26),rgba(58, 153, 80, 0.479)),url(../Artboard\ 1.png);
+    width: 100%;
+    height: 100vh;
+    /* background-position: center; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    position: relative;
+    background-attachment: fixed;
+}
+
+.nav-item
+{
+    font-weight:bold;
+    z-index: 100;
+}
+.nav-item .nav-link:hover{
+  color:var(--secondary-color)!important
+}
+.nav-item .current
+{
+    color:var(--secondary-color)!important;
+}
+.header-page
+{
+    position:absolute;
+    top:30%;
+    left:0%;
+    width: 100%;
+  
+}
+.header-page h2
+{
+    font-size: 4rem;
+    margin-right: 20px;
+}
+.header-page p
+{
+    font-size:2rem;
+}
+.header-page p.typing
+{
+    font-size: 1.5rem;
+}
+.header-page .head
+{
+  animation:movingText;
+  animation-duration: 1s ;
+  animation-iteration-count: infinite;
+}
+.btn
+{
+    width: 25%;
+}
+
+
+@keyframes movingText{
+    0%{
+        transform: scale(1.03,1.03);
+    }
+    50%
+    {
+        transform: scale(1.05,1.05);
+    }
+    100%
+    {
+        transform: scale(1.03,1.03);
+    }
+    
+}
+/* <!----------------------------header-section-------------------- --> */
+
+/* ---------form-content----------- */
+.form
+{
+    position: relative;
+    width:800px;
+    height: 500px;
+    background:whitesmoke;
+
+    margin-top:-9px;
+    left:20%;
+    overflow: hidden;
+    box-shadow:0 0 8px black;
+    border-radius: 8px;
+}
+.form-header{
+    width: 100%;
+    background:var(--primary-color);
+    height:50px;
+    color:whitesmoke;
+    padding: 10px;
+    border-top-left-radius: 5px;
+    
+}
+
+.form-details{
+    position: relative;
+    width: 100%;
+   height: 100%;
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+.form-details .form-left-content
+{
+  
+    flex-basis: 40%;
+    background: var(--primary-color);
+    width: 100%;
+    height:100%;
+}
+.form-details .form-left-content .logo
+{
+    font-size: 1.5rem;
+    margin:60% 5%;
+    font-weight: bold;
+
+
+}
+.form .form-right-content
+{
+    flex-basis: 60%;
+    width: 100%;
+    /* height:100%; */
+}
+
+.form .form-right-content .form-control
+{
+     box-shadow: none!important;
+}
+.form .form-right-content .btn{
+    width: 100%;
+}
+.form-control:focus {
+    border-color:1px solid rgba(0, 128, 0, 0.747)!important;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem 1px solid rgba(0, 128, 0, 0.747);
+}
+
+
+.form-control {
+ 
+    border: 1px solid rgba(0, 128, 0, 0.747);
+
+  }
+  
+/* ---------form-content----------- */
+
+
+
+
+/* ----------------viewContact------------------------ */
+
+
+.card{
+    position:relative;
+    width: 18rem;
+    height: 16rem;
+    border-radius:5px!important;
+    box-shadow: 0 0 12px black;
+    overflow:hidden;
+    margin-bottom: 25px;
+    /* overflow-x: ; */
+  
+}
+.dynamicContent
+{
+    margin-top: -70px;
+    height: 80vh;
+width: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.bg-delete
+{
+    background:linear-gradient(20deg,rgb(19, 26, 26),rgb(255, 0, 0));
+}
+.bg-edit
+{
+    background:linear-gradient(20deg,rgb(19, 26, 26),rgb(255, 208, 0));
+}
+.card img{
+    object-fit: cover;
+    width: inherit;
+    height:inherit;
+    border-radius:5px!important;
+
+
+}
+
+.card-person-content
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color:whitesmoke;
+    background:rgba(45, 109, 60, 0.9);
+    left:100%;
+    border-radius:5px!important;  
+    padding:10px;
+    transition: all 1.5s;  
+
+}
+.card:hover .card-person-content {
+    cursor: pointer;
+ 
+    left:0%;
+    }
+.card-person-content p
+{
+    font-size: 15px;
+}
+.card-person-content .btn{
+    width: 80%;
+margin-bottom: 20px;
+}
+
+/* ----------------viewContact------------------------ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------media screens------------------ */
+@media screen  and (max-width:768px)
+{
+    .navbar-brand
+    {
+        margin:auto;
+        font-size: 1.5rem;
+    }
+    .nav-item
+    {
+        margin:auto;
+        font-size: 1.5rem;
+    }
+    .header-page
+{
+    position:absolute;
+    top:40%;
+    left:-1%;
+    width: 100%;
+}
+
+
+    .header-page h2
+    {
+        font-size:3rem;
+        text-align: center;
+        
+    }
+    .header-page p
+    {
+        font-size:1.5rem;
+    }
+    .header-page p.typing
+    {
+        font-size:1.2rem;
+        margin-top: 30px;
+    }
+    .btn{
+        width: 100%;
+       
+      
+    }
+    #footer
+    {
+     
+        font-size:1rem;
+    }
+
+
+
+    /* --------------------formDetaial----------------------- */
+    .form
+    {
+        position: relative;
+        width:300px;
+        height:auto;
+        background:whitesmoke;
+    z-index: 100;
+        margin-top:20px;
+        left:20%;
+    
+        margin-left:-13%;
+       
+    }
+    .form-header{
+        width: 100%;
+        
+    
+        
+    }
+    .form .container{
+        margin-top: 20px;
+    }
+    .form-details{
+        position: relative;
+        width: 100%;
+       height: 100%;
+       
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    .form-details .form-left-content
+    {
+      
+        flex-basis:100%;
+        background: var(--primary-color);
+        width: 100%;
+        height:100%;
+    }
+    .form-details .form-left-content .logo
+    {
+        font-size: 1.5rem;
+        margin:10% 5%;
+        font-weight: bold;
+    
+    
+    }
+    .form .form-right-content
+    {
+        flex-basis: 60%;
+        width: 100%;
+        /* height:100%; */
+    }
+    
+    /* .form .form-right-content .form-control
+    {
+         box-shadow: none!important;
+    } */
+    .form .form-right-content .btn{
+        width: 100%;
+    }
+    /* .form .form-right-content .form-control:focus{
+        border:1px solid green!important
+    } */
+          
+
+
+
+    
+
+  
+    /* --------------------formDetaial----------------------- */
+
+
+    /* =================viewContact------------------- */
+
+    .card{
+        position:relative;
+        width: 21rem;
+        height: 18rem;
+        border-radius:5px!important;
+        box-shadow: 0 0 12px black;
+        /* overflow:hidden; */
+        /* overflow-x: ; */
+      
+    }
+    .card-person-content p
+    {
+        font-size: 14px;
+    }
+    .dynamicContent
+    {
+      
+        height: 65vh;
+  
+        /* overflow: hidden;
+        overflow-y: scroll; */
+    }
+    /* =================viewContact------------------- */
+}
+/* -------------------media screens------------------ */
